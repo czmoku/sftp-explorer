@@ -51,5 +51,6 @@ impl<'r> Responder<'r, 'static> for Ress {
 
 #[launch]
 pub fn rocket() -> _ {
-    rocket::build().mount("/", routes![list_root, list_sub_dir, download_file])
+    let http_prefix = std::env::var("HTTP_PREFIX").unwrap_or(String::from(""));
+    rocket::build().mount(format!("/{}", http_prefix), routes![list_root, list_sub_dir, download_file])
 }
