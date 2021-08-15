@@ -7,8 +7,10 @@ authors = ["Paweł Czmok <czmoku@gmail.com>"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rocket = "0.5.0-rc.1"
+rocket = "0.5.0-dev"
+rocket_cors = "0.5.2"
 ssh2 = "0.9.1"
 serde = "1.0"
 serde_json = "1.0"
 tempfile = "3.2.0"
+async-ssh2-lite = "0.2.1"
