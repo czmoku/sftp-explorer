@@ -26,3 +26,7 @@ Tested and used only through docker image, but also you can build it manually (c
 * **SFTP_PORT** - sftp destination server port, default 22
 * **SFTP_USERNAME** - sftp server username
 * **SFTP_PASSWORd** - sftp server password
+
+## Info
+
+Dockerhub - https://hub.docker.com/r/czmoku/sftp_explorer
