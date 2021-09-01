@@ -6,7 +6,6 @@ use rocket::serde::{Serialize, Deserialize};
 use std::io::{Read, Write, IoSliceMut};
 use std::fs::File;
 use rocket::tokio::macros::support::thread_rng_n;
-use tempfile::TempDir;
 use std::ffi::OsStr;
 use rocket::futures::AsyncRead;
 use std::pin::Pin;

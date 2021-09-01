@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import DirectoryExplorer from './components/DirectoryExplorer.vue'
+import DirectoryExplorer from './components/directory/DirectoryExplorer.vue'
 export default {
   name: 'App',
   components: {

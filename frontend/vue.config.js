@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '${PATH_PREFIX}',
+    publicPath: '${STATIC_PREFIX}',
 }

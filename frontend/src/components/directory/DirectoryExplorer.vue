@@ -18,8 +18,8 @@
             prop="path"
             label="File">
           <template #default="scope">
-            <a v-if="scope.row.is_directory" v-bind:href="'${PATH_PREFIX}' + scope.row.path">{{ scope.row.path }}</a>
-            <a v-else v-bind:href="'${API_URL}/download/' + scope.row.path">{{ scope.row.path }}</a>
+            <a v-if="scope.row.is_directory" v-bind:href="'${STATIC_PREFIX}' + scope.row.path">{{ scope.row.path }}</a>
+            <a v-else v-bind:href="'${API_PREFIX}/download/' + scope.row.path">{{ scope.row.path }}</a>
           </template>
         </el-table-column>
         <el-table-column
@@ -57,8 +57,8 @@ export default {
       }
 
       return Promise.all([
-        fetch("${API_URL}/list" + window.location.pathname.replaceAll("${PATH_PREFIX}", "")).then(checkIfOk()),
-        fetch("${API_URL}/instance/info").then(checkIfOk())
+        fetch("${API_PREFIX}/list" + window.location.pathname.replaceAll("${STATIC_PREFIX}", "")).then(checkIfOk()),
+        fetch("${API_PREFIX}/instance/info").then(checkIfOk())
       ])
           .then(res => {
             entries.value = res[0]
