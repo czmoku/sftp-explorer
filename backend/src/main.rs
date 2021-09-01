@@ -1,6 +1,6 @@
 #[macro_use] extern crate rocket;
 use std::net::ToSocketAddrs;
-use sftp_http::http;
+use sftp_explorer::http;
 
 #[launch]
 fn start() -> _ {

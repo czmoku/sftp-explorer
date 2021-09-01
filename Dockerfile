@@ -14,10 +14,10 @@ RUN yarn build
 
 FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y libssl-dev
-COPY --from=builder /app/target/release/sftp_http .
+COPY --from=builder /app/target/release/sftp_explorer .
 COPY --from=vue-builder /app/dist ./static
 COPY backend/Rocket.toml .
 ENV API_PREFIX=/api
 ENV STATIC_PREFIX=/ui
 ENV BE_PREFIX=/api
-ENTRYPOINT ["/sftp_http"]
+ENTRYPOINT ["/sftp_explorer"]
